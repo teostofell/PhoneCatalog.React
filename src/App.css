@@ -1,0 +1,29 @@
+/* Registration container */
+
+.wrapper-center{
+  padding: 3rem;
+  background: #ececec;
+}
+
+.wrapper-center .container{
+  background: white;
+}
+
+.wrapper-center .container .registration-form{
+  margin: 2rem 0px;
+}
+
+.welcome-block {
+  background: #4071af;
+  color: white;
+}
+
+button.btn{
+  border-radius: 0;
+}
+
+button.btn-primary{
+  background: #4071af;
+}
+
+/* Phones List container */

@@ -1,0 +1,4 @@
+.overlapping-block {overflow:hidden}
+.overlapping-block img {position:relative; float:left;  height:2.3rem; }
+.overlapping-block img + img {margin-left: -1rem; }
+.overlapping-block img:hover { z-index: 9999; }

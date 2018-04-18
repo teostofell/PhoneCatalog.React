@@ -1,0 +1,39 @@
+
+/* Header */
+
+header .login-row{
+    background: var(--clean-color);
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+header .user-panel{
+    display: inline-block;
+}
+
+header .user-panel .icon{
+    margin: 0 0.5rem;
+    vertical-align: middle;
+    color: #212529;
+}
+
+header .user-panel .admin-icon{
+    color: #f06953;
+}
+
+header .user-panel .avatar-thumb{
+    height: 2.1rem;
+}
+
+header .logo{
+    font-size: 2rem;
+}
+
+header .nav-row{
+    background: var(--clean-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .navbar-collapse{
+    justify-content: flex-end;
+}

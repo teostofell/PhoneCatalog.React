@@ -1,0 +1,23 @@
+.orders-list .order-item{
+    cursor: pointer;
+}
+
+.orders-list .overlapping-block{
+    display: inline-block;
+}
+
+.orders-list .order-date{
+    vertical-align: top;
+    margin-left: 2rem;
+    color: #323232;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.orders-list .order-total{
+    vertical-align: top;
+    float: right;
+    color: #f06953;
+    font-size: 18px;
+    font-weight: bold;
+}

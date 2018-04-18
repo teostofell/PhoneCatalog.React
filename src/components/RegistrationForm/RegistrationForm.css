@@ -1,0 +1,8 @@
+.registration-form input.form-control {
+    height: 2.5rem;
+    width: 100%;
+}
+
+.registration-form .field-block{
+    margin: 1.5rem 0;
+}

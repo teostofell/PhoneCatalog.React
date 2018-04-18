@@ -1,0 +1,18 @@
+.admin-phone-section .phone-thumb {
+    height: 5rem;
+}
+
+.admin-phone-section .phone-title {
+    color: #323232;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section.admin-phone-section button.phone-update{
+    color: white;
+}
+
+section.admin-phone-section button.phone-remove:hover{
+    background: #DC1F29;
+}
+

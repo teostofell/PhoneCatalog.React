@@ -1,0 +1,11 @@
+footer{
+    background: #264a60;
+    color: white;
+}
+
+footer .footer-copyright a{
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+

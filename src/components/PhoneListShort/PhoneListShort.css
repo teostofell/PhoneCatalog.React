@@ -1,0 +1,16 @@
+.search-section .phone-item img{
+    height: 7rem;
+}
+
+.search-section .phone-item .card{
+    border-radius: 0;
+}
+
+.search-section .search-field .btn{
+    position: relative;
+}
+
+.search-section .search-field .btn > div{
+    position: relative;
+    top: 2px;
+}

@@ -1,0 +1,23 @@
+:root {
+  --clean-color: #fff;
+  --dirty-color: #ececec;
+  --border-color: #e5e5e5;
+  --text-color: #323232;
+  --buttons-color: #4071af;
+}
+
+body{
+  color: var(--text-color);
+}
+
+.icon{
+  font-size: 0.5rem;
+}
+
+input.form-control{
+  border-radius: 0;
+}
+
+div.modal-content{
+  border-radius: 0;
+}
