@@ -7,7 +7,6 @@ class CheckboxFilter extends React.Component {
 	render(){
 		let values = this.props.values;
 		let { field, label, onChecked, onUnchecked } = this.props;
-		console.log(this.props, "fltr");
 
 		if(values === undefined) return null;
 

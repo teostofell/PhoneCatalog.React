@@ -27,8 +27,6 @@ const store = createStore(rootReducer, initialState, window.__REDUX_DEVTOOLS_EXT
 window.onbeforeunload = () => {
 	const { login } = store.getState();
 
-	console.log(login.user, "How to storage it?");
-
 	localStorage.setItem("teostofell::token", login.token);
 	localStorage.setItem("teostofell::user", JSON.stringify(login.user));
 };

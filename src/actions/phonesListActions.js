@@ -64,7 +64,6 @@ export function fetchPhonesList(){
         let filter = getState().phonesList.filter;
         let itemsOnPage = getState().phonesList.page.items;
 		let page = getState().phonesList.page.current;
-		console.log("HERE");
 		return Api.getPhones(filter, itemsOnPage, page).then(response => {dispatch(receivePhonesList(response.items, response.totalItems, response.totalPages)); });
 	};
 }

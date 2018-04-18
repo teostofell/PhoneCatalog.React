@@ -38,7 +38,6 @@ class PhoneUpdateContainer extends React.Component{
 function submit(values, dispatch, token) {
 	return Api.updatePhone(values, token).then(response => console.log(response, "Response"))
 		.catch(error => {
-			console.log(error.response.data.Message, "Error")
 			throw new SubmissionError({
 				...error.response.data,
 				_error: error.response.data.Message

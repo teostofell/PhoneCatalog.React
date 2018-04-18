@@ -6,7 +6,6 @@ import FileInput from "./FileInput";
 class ImageForm extends React.Component {
     handleChange(e) {
         e.preventDefault();
-        console.log(e, "Om change");
     }
 
     render() {

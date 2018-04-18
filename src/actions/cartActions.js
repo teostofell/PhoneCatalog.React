@@ -56,6 +56,6 @@ export function closeOrder(){
 
 export function getOrder(){
     return (dispatch, getState) => {
-        return Api.getOrder(getState().login.user.Id).then((response) => { console.log(response, "getCart"); dispatch(receiveCart(response)) });
+        return Api.getOrder(getState().login.user.Id).then((response) => { dispatch(receiveCart(response)) });
     }
 }

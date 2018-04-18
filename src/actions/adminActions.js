@@ -52,7 +52,6 @@ export function fetchPhonesList(){
 		
         let itemsOnPage = getState().admin.phonesList.page.items;
 		let page = getState().admin.phonesList.page.current;
-        console.log(itemsOnPage, "admin")
 		return Api.getPhones({}, itemsOnPage, page).then(response => {dispatch(receivePhonesList(response.items, response.totalItems, response.totalPages)); });
 	};
 }
@@ -64,7 +63,6 @@ export function fetchMorePhones(){
         let newPage = getState().admin.phonesList.page.current + 1;
 
         if(newPage > totalPages){
-            console.log("hee");
             return;
         }
 

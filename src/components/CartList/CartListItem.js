@@ -13,7 +13,6 @@ class CartListItem extends React.Component {
 	}
 
 	handleClick(e) {
-		console.log(this);
 		this.props.removeItem(this.props.id);
 	}
 

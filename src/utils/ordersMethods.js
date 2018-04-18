@@ -14,8 +14,6 @@ export async function getOrder(userId){
             }
         );
 
-    console.log(result ,"getCart");
-
     return result;
 }
 
@@ -28,7 +26,7 @@ export async function addItemToOrder(item){
                     return { items: response.data }
                 }
             );
-    console.log(result, "GET ITEMS");
+
     return result;
 }
 

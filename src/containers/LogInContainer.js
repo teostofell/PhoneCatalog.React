@@ -24,7 +24,6 @@ class LogInContainer extends React.Component{
 function submit(values, dispatch){
 	return Api.authentication(values)
 				.then(response => {
-			console.log(response, 'Login success');
 			dispatch(toggleLoginModal());
 			dispatch(signIn(response.user, response.token));
 			dispatch(getOrder());

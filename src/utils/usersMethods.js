@@ -35,7 +35,6 @@ export async function authentication(user) {
     })
         .then(response => response.data);
 
-    console.log({ token, user: userInfo }, "Authentication");
     return { token, user: userInfo };
 }
 
@@ -52,7 +51,6 @@ export async function getUsers(filter = null, itemsOnPage = 0, page = 0){
                     return response.data
                 }
             );
-    console.log(result, "GET ITEMS");
     return result;
 }
 

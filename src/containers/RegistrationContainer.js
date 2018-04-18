@@ -35,12 +35,10 @@ class RegistrationContainer extends React.Component {
 }
 
 function submit(values, dispatch) {
-	console.log(values, "FORM");
 	if (values.Password !== values.ConfirmPassword) {
 	}
 	return Api.registration(values).then(response => console.log(response, "Response"))
 		.catch(error => {
-			console.log(error.response.data.Message, "Error")
 			throw new SubmissionError({
 				...error.response.data,
 				_error: error.response.data.Message

@@ -39,7 +39,6 @@ const phonesListReducer = function(state = initialState, action){
             newFilter[group][name] = false;
             return {...state, filter: newFilter};
         case RANGE_CHANGED:        
-            console.log(action, "Our action");
             let { field, value } = action.payload;
             group = action.payload.group;
             newFilter = {...state.filter};

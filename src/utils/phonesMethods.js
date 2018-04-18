@@ -25,8 +25,6 @@ function convertObjectToArray(items) {
 
 
 export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
-    console.log(filter);
-
     let filterVM = { ...filter };
 
     // TODO: Check this code
@@ -48,9 +46,6 @@ export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
 
     let { Storage, Price } = filterVM;
 
-    console.log(filterVM, "1");
-
-
     var queries = { ...filterVM, ItemsOnPage: itemsOnPage, Page: page };
 
     let result = await Axios.get(origin + "api/phones", {
@@ -62,7 +57,6 @@ export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
             return { items: response.data, totalItems, totalPages }
         }
         );
-    console.log(result, "GET ITEMS");
     return result;
 }
 
@@ -73,8 +67,6 @@ export async function getFilters() {
 
             items.Brand = convertArrayToObject(items.Brand);
             items.OS = convertArrayToObject(items.OS);
-
-            console.log(items, "2");
 
             return { items: response.data }
         });
@@ -107,7 +99,6 @@ export async function getDetailsById(id) {
 }
 
 export async function createPhone(data, token) {
-    console.log(token, "From form create");
 
     let axiosConfig = {
         headers: {
@@ -121,8 +112,6 @@ export async function createPhone(data, token) {
 }
 
 export async function updatePhone(data, token) {
-    console.log(token, "From form");
-
     let axiosConfig = {
         headers: {
             'Authorization': `Bearer ${token}`
@@ -156,8 +145,6 @@ export async function getPhonePhotos(id) {
 }
 
 export async function addPhonePhoto(id, data) {
-    console.log(data, "From form");
-
     let result = await Axios.post(origin + `api/photos/?phoneId=${id}`, data)
         .then(response => { return { details: response.data } });
     return result;

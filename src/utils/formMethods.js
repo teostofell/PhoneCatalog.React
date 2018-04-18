@@ -35,9 +35,5 @@ export async function getFormData() {
     }
     );
 
-    console.log(cities, "FromData");
-
-
-
     return { cities, resolutions, brands, os, roles };
 }
