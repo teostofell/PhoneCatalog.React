@@ -14,7 +14,7 @@ const ProfileIcon = (props) => {
 
     return (
         <div className="icon" title="Profile">
-            <img className="avatar-thumb rounded-circle user-avatar" src={src}/>
+            <img className="avatar-thumb rounded-circle user-avatar" alt="avatar" src={src}/>
         </div>
     )
 }
@@ -25,7 +25,7 @@ class UnathorizedPanel extends React.Component {
         let { toggleModal } = this.props;
         return (
             <React.Fragment>
-                <a href="#"><LoginIcon className="icon" title="Log In" size={30} onClick={toggleModal}/></a>
+                <LoginIcon className="icon" title="Log In" size={30} onClick={toggleModal}/>
                 <Link to="/registration"><RegistrationIcon title="Registration" className="icon" size={30}/></Link>
             </React.Fragment>
         );
@@ -51,15 +51,15 @@ class LogInRow extends React.Component{
     render(){
         let {toggleModal, onChange, searchString, isLogged, isAdmin, onClick, avatar } = this.props;
         return (
-            <div class="login-row px-4 d-flex justify-content-between">
-                <div class="logo">
+            <div className="login-row px-4 d-flex justify-content-between">
+                <div className="logo">
                     LOGO
                 </div>
-                <div class="panels d-flex">
-                    <div class="search-panel">
+                <div className="panels d-flex">
+                    <div className="search-panel">
                         <SearchField onChange={onChange} searchString={searchString} onClick={onClick} small={true} />
                     </div>
-                    <div class="user-panel d-flex align-items-center">
+                    <div className="user-panel d-flex align-items-center">
                         {(isLogged) 
                             ? <AuthorizedPanel isAdmin={isAdmin} avatar={avatar}/>
                             : <UnathorizedPanel toggleModal={toggleModal}  />}

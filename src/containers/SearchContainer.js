@@ -1,6 +1,5 @@
 import React from "react"
 import { connect } from "react-redux";
-import PhonesList from "../components/PhonesList/PhonesList";
 import SearchField from "../components/Search/SearchField";
 import { fetchSearchList } from "../actions/searchActions";
 import PhonesListShort from "../components/PhoneListShort/PhonesListShort";

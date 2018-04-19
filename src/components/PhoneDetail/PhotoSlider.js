@@ -17,7 +17,7 @@ class PhotoSlider extends Component {
                     {
                         photos.map(p => 
                             <div>
-                                <img src={p.Path} className="slider-photo"/>
+                                <img src={p.Path} alt="slider-item" className="slider-photo"/>
                             </div>
                         )
                     }

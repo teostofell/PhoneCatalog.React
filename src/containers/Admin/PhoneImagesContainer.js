@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import PhoneDetailForm from "../../components/Admin/PhoneDetail/PhoneDetailForm";
-import { fetchFormData } from "../../actions/formActions";
 import Api from "../../utils/Api";
-import { SubmissionError } from "redux-form";
 import ImagesList from "../../components/Admin/ImagesList/ImagesList";
 import ImagePicker from "../../components/ImagePicker/ImagePicker";
 import { Button } from "reactstrap";
@@ -47,7 +44,6 @@ class PhoneImagesContainer extends React.Component {
             .then((response) => this.setState({ images: response }));
     }
     render() {
-        let { brands, os, resolutions, onSubmit } = this.props;
         return (
             <React.Fragment>
                 <ImagePicker isOpen={this.state.isPickerOpen} toggle={this.handleClick} onSubmit={this.onSubmit} />

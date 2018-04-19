@@ -10,7 +10,7 @@ class OverlappedImages extends React.Component {
             <div className="overlapping-block">
                 {
                     images.map(p => (
-                        <img src={p} />
+                        <img src={p} alt="phone-thumb" />
                     ))
                 }
             </div>

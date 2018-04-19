@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 class PageItem extends React.Component {
     constructor(props){
@@ -18,7 +17,7 @@ class PageItem extends React.Component {
 		let { number } = this.props;
 
 		return (
-            <li className="page-item" onClick={this.onClick}><a className="page-link" href="#">{number}</a></li>
+            <li className="page-item" onClick={this.onClick}><button className="page-link" href="#">{number}</button></li>
 		);
 	}
 }

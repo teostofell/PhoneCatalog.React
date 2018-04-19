@@ -19,7 +19,7 @@ class RoleSelector extends React.Component {
     }
 
     render() {
-        let { roles, defaultValue } = this.props;
+        let { roles } = this.props;
 
         if(roles == null)
             return null;

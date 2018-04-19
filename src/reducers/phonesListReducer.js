@@ -33,7 +33,7 @@ const phonesListReducer = function(state = initialState, action){
             newFilter[group][name] = true;
             return {...state, filter: newFilter};
         case UNCHECK_FILTER:
-            group = action.payload.group, name = action.payload.name;
+            group = action.payload.group; name = action.payload.name;
             newFilter = {...state.filter };
             newFilter[group] = {...state.filter[group]};
             newFilter[group][name] = false;

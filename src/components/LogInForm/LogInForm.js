@@ -1,7 +1,5 @@
 import React from "react"
-import { Field, reduxForm } from 'redux-form'
-import Spinner from "../Spinner/Spinner";
-import { Redirect } from "react-router-dom";
+import { Field, reduxForm } from "redux-form";
 import "./LogInForm.css";
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -9,14 +7,14 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
       <label>{label}</label>
       <div>
       <input className="form-control" {...input} placeholder={label} type={type} />
-        {touched && error && <div class="invalid-feedback">{error}</div>}
+        {touched && error && <div className="invalid-feedback">{error}</div>}
       </div>
     </div>
 )
 
 class LogInForm extends React.Component {
     render(){
-      const { error, handleSubmit, submitting, data, submitSucceeded } = this.props;
+      const { error, handleSubmit, submitting } = this.props;
 
         return (
             <form onSubmit={handleSubmit} className="login-form">

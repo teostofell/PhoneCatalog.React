@@ -23,12 +23,12 @@ class SearchField extends React.Component {
     render() {
         let { searchString, small, onClick } = this.props;
         return (
-            <div class="input-group search-field">
-                <input type="text" class="form-control" placeholder="Search..."
+            <div className="input-group search-field">
+                <input type="text" className="form-control" placeholder="Search..."
                     aria-label="Search string" onChange={this.handleChange} 
                     value={searchString} ref={(item) => {this.field = item;}} />
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" onClick={onClick}>
+                <div className="input-group-append">
+                    <button className="btn btn-outline-secondary" type="button" onClick={onClick}>
                         {
                             (small) ? <Icon icon={search} /> : <Icon icon={cross} />
                         }                        

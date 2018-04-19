@@ -1,4 +1,4 @@
-import { ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART, CLEAR_CART, RECEIVE_CART } from "./index";
+import { ADD_ITEM_TO_CART, CLEAR_CART, RECEIVE_CART } from "./index";
 import Api from "../utils/Api";
 
 export function receiveCart(cart){
@@ -11,13 +11,6 @@ export function receiveCart(cart){
 export function addItemToCart(item){
     return {
         type: ADD_ITEM_TO_CART,
-        payload: { item }
-    }
-}
-
-export function removeItemFromCart(item){
-    return {
-        type: REMOVE_ITEM_FROM_CART,
         payload: { item }
     }
 }

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { fetchPhonesList, fetchFiltersList, checkFilter, uncheckFilter, changePhonesPage, rangeChanged } from "../actions/phonesListActions";
 import Filter from "../components/Filter/Filter";
 import PhonesList from "../components/PhonesList/PhonesList";
-import Spinner from "../components/Spinner/Spinner";
 import Pagination from "../components/Pagination/Pagination";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
@@ -33,7 +32,7 @@ class PhonesListContainer extends React.Component {
 	render(){
 		let totalItems = this.props.data.total;
 		let { items } = this.props.data;
-		let { onChecked, onUnchecked, changePage, addToCart, removeFromCart, OrderId, onChanged } = this.props;
+		let { onChecked, onUnchecked, changePage, removeFromCart, OrderId, onChanged } = this.props;
 		let { total } = this.props.data.page;
 		return (
 			<div className="container my-3">				

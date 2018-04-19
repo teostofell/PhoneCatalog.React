@@ -1,8 +1,6 @@
 import React from "react";
 import PhoneListItem from "./PhoneListItem";
 import Spinner from "../Spinner/Spinner";
-import { CardDeck, CardGroup } from 'reactstrap';
-import PhonesList from "../PhonesList/PhonesList";
 import "./PhoneListShort.css";
 
 function PhonesListShort(props) {

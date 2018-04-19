@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroupItem, Badge, Button } from "reactstrap";
+import { ListGroupItem, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import Icon from 'react-icons-kit';
 import { image } from 'react-icons-kit/icomoon/image';        
@@ -23,7 +23,7 @@ class Phone extends React.Component {
         return (
             <ListGroupItem className="my-2 justify-content-between d-flex align-items-center phone-item">
                 <div className="phone-block d-flex align-items-center">
-                    <img className="phone-thumb" src={Photo} />
+                    <img className="phone-thumb" alt={Model} src={Photo} />
                     <div className="phone-title pl-3">{Model}</div>
                 </div>
                 <div className="buttons-block">

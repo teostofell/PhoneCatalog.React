@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import UserInfo from "../components/UserInfo/UserInfo";
-import PhoneListShort from "../components/PhoneListShort/PhonesListShort";
 import CartList from "../components/CartList/CartList";
 import { removeFromCart, getOrder } from "../actions/cartActions";
 import { Button } from "reactstrap";
@@ -21,7 +19,7 @@ class CartContainer extends React.Component {
     }
 
     handleClick(){
-        if(this.props.cart.Total != 0)
+        if(this.props.cart.Total !== 0)
         {
             this.props.makePurchase();
             this.props.history.push("/profile");
@@ -33,7 +31,7 @@ class CartContainer extends React.Component {
     render() {
         let { cart, removeItem } = this.props;
         return (
-            <div class="wrapper-center">
+            <div className="wrapper-center">
                 <div className="container text-center cart-container">
                     <div className="row">
                         <div className="col-md-5 col-sm-12 cart-info">

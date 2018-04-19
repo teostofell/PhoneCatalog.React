@@ -5,11 +5,9 @@ import PhoneSpecs from "../components/PhoneDetail/PhoneSpecs";
 import { fetchPhoneDetails } from "../actions/phoneDetailActions";
 import Spinner from "../components/Spinner/Spinner";
 import { addToCart } from "../actions/cartActions";
-import CommentForm from "../components/Comment/CommentForm";
 import Api from "../utils/Api";
-import CommentsList from "../components/Comment/CommentsList";
 import CommentBlock from "../components/Comment/CommentBlock";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 
 class PhoneDetailContainer extends React.Component {
     constructor(props) {

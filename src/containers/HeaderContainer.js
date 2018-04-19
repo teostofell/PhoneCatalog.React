@@ -24,7 +24,7 @@ class Header extends React.Component{
     }
 
     render(){
-        let { onChange, searchString, isLogged, isAdmin, path, avatar } = this.props;
+        let { searchString, isLogged, isAdmin, path, avatar } = this.props;
 
         return(
             <header>

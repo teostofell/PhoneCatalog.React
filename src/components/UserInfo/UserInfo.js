@@ -8,11 +8,11 @@ class UserInfo extends React.Component {
         return (
             <div className="card sticky-top text-center">
                 <div className="user-avatar" onClick={onClick}>
-                    <img src={Avatar} />
+                    <img src={Avatar} alt="avatar" />
                 </div>
-                <div class="card-body">
-                    <h4 class="card-title">{Name}</h4>
-                    <p class="card-text">{Email}</p>
+                <div className="card-body">
+                    <h4 className="card-title">{Name}</h4>
+                    <p className="card-text">{Email}</p>
                     <Button onClick={signOut}>Sign Out</Button>
                 </div>
             </div>

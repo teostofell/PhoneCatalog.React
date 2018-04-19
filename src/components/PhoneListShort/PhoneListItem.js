@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-	Card, CardImg, CardText, CardBody,
-	CardTitle, CardFooter, CardSubtitle, Button
+	Card, CardText, CardBody,
+	CardTitle, CardSubtitle
 } from 'reactstrap';
 import StarRating from 'react-star-rating-component';
 
 class PhoneListItem extends React.Component{
     render(){
-		let { Model, Id, Photo, Slug, Price, Grade } = this.props.data;
+		let { Model, Photo, Slug, Price, Grade } = this.props.data;
 
 		return (
 			<Card className="flex-row my-2">

@@ -3,7 +3,7 @@ import "./Phone.css";
 import { Link } from "react-router-dom";
 import {
 	Card, CardImg, CardText, CardBody,
-	CardTitle, CardFooter, CardSubtitle, Button
+	CardTitle, CardSubtitle
 } from 'reactstrap';
 import CartButton from "../CartButton/CartButton";
 import StarRating from 'react-star-rating-component';

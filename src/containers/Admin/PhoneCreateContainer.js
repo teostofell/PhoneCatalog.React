@@ -20,7 +20,7 @@ class PhoneCreateContainer extends React.Component{
         this.props.getFormData();
     }
     render(){
-        let { brands, os, resolutions, onSubmit } = this.props;
+        let { brands, os, resolutions } = this.props;
         return (
             <PhoneDetailForm onSubmit={this.onSubmit} brands={brands} os={os} resolutions={resolutions} />
         );

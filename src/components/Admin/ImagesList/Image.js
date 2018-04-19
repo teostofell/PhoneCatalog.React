@@ -1,9 +1,4 @@
 import React from "react";
-import Phone from "../Phone/Phone";
-import Spinner from "../../Spinner/Spinner";
-import { CardDeck, CardGroup, ListGroup, ListGroupItem, Badge } from 'reactstrap';
-import { Link } from "react-router-dom";
-import { Button } from "reactstrap";
 
 class Image extends React.Component {
     constructor(props){
@@ -17,12 +12,11 @@ class Image extends React.Component {
     }
 
     render() {
-        let { Path, Id } = this.props.image;
-        let { onClick } = this.props;
+        let { Path } = this.props.image;
 
         return (
             <div className="gallery-image m-2">
-                <button onClick={this.handleClick} type="button" class="close" aria-label="Close">
+                <button onClick={this.handleClick} type="button" className="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <img src={Path} />

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Navbar, NavItem, Nav, NavbarToggler, Collapse, NavbarBrand } from "reactstrap";
 
 class NavRow extends React.Component {
@@ -20,7 +20,7 @@ class NavRow extends React.Component {
     render() {
         let { path } = this.props;
         return (
-            <div class="nav-row">
+            <div className="nav-row">
                 <Navbar color="faded" light expand="md">
                     <NavbarBrand href="/" className="mr-auto navbar-right">{path}</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />

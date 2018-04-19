@@ -5,8 +5,8 @@ import { fetchFormData } from "../../actions/formActions";
 import Api from "../../utils/Api";
 import { SubmissionError } from "redux-form";
 
-class PhoneUpdateContainer extends React.Component{
-    constructor(props){
+class PhoneUpdateContainer extends React.Component {
+    constructor(props) {
         super(props);
 
         this.state = { initialState: {} };
@@ -14,11 +14,11 @@ class PhoneUpdateContainer extends React.Component{
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(values, dispatch){
+    onSubmit(values, dispatch) {
         return submit(values, dispatch, this.props.token);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         Api.getDetailsById(this.props.match.params.phoneId)
             .then(response => {
                 this.setState({ initialState: response });
@@ -26,23 +26,23 @@ class PhoneUpdateContainer extends React.Component{
 
         this.props.getFormData();
     }
-    render(){
-        let { brands, os, resolutions, onSubmit } = this.props;
+    render() {
+        let { brands, os, resolutions } = this.props;
         return (
-            <PhoneDetailForm enableReinitialize={true} onSubmit={this.onSubmit} brands={brands} os={os} resolutions={resolutions} 
+            <PhoneDetailForm enableReinitialize={true} onSubmit={this.onSubmit} brands={brands} os={os} resolutions={resolutions}
                 initialValues={this.state.initialState} />
         );
     }
 }
 
 function submit(values, dispatch, token) {
-	return Api.updatePhone(values, token).then(response => console.log(response, "Response"))
-		.catch(error => {
-			throw new SubmissionError({
-				...error.response.data,
-				_error: error.response.data.Message
-			});
-		});
+    return Api.updatePhone(values, token).then(response => console.log(response, "Response"))
+        .catch(error => {
+            throw new SubmissionError({
+                ...error.response.data,
+                _error: error.response.data.Message
+            });
+        });
 }
 
 const mapStateToProps = (state) => {
@@ -57,7 +57,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getFormData: () => {
-			dispatch(fetchFormData());
+            dispatch(fetchFormData());
         },
         onSubmit: submit,
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupAddon } from 'reactstrap';
 import RangeInput from "./RangeInput";
 
 class RangeFilter extends React.Component {

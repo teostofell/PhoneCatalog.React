@@ -15,6 +15,7 @@ header .user-panel .icon{
     margin: 0 0.5rem;
     vertical-align: middle;
     color: #212529;
+    cursor: pointer;
 }
 
 header .user-panel .admin-icon{

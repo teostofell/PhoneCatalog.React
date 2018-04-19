@@ -1,7 +1,7 @@
 import React from "react";
 import Phone from "../Phone/Phone";
 import Spinner from "../../Spinner/Spinner";
-import { CardDeck, CardGroup, ListGroup, ListGroupItem, Badge } from 'reactstrap';
+import { ListGroup } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 

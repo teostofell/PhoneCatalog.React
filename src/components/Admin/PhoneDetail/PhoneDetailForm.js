@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import Spinner from "../../Spinner/Spinner";
 import { Redirect } from "react-router-dom";
 import FileInput from "../../ImagePicker/FileInput";
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { FormGroup, Label } from 'reactstrap';
 
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -11,7 +11,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
         <label>{label}</label>
         <div>
             <input className="form-control" {...input} placeholder={label} type={type} />
-            {touched && error && <div class="invalid-feedback">{error}</div>}
+            {touched && error && <div className="invalid-feedback">{error}</div>}
         </div>
     </div>
 );
@@ -32,10 +32,13 @@ const SelectField = (props) => (
 
 class PhoneDetailForm extends React.Component {
     render() {
-        const { error, handleSubmit, submitting, data, submitSucceeded, brands, os, resolutions } = this.props;
+        const { error, handleSubmit, submitting, submitSucceeded, brands, os, resolutions } = this.props;
 
         if (brands == null)
             return <Spinner isSpinning={true} />
+
+        if (submitSucceeded)
+            return <Redirect to="/admin" />;
 
         return (
             <form onSubmit={handleSubmit} className="phone-form">

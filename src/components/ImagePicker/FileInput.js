@@ -29,11 +29,9 @@ class FileInput extends React.Component {
     }
 
     render() {
-        const { input: { value } } = this.props
-
         return (
             <div className="my-2">
-                <img className="image-preview" src={this.state.imageSrc} />
+                <img className="image-preview" alt="preview" src={this.state.imageSrc} />
                 <input
                     type="file"
                     onChange={this.onChange}

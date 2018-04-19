@@ -1,5 +1,5 @@
 import React from "react";
-import { FormGroup, Label, Input, Button, Card, CardHeader, CardBody } from "reactstrap";
+import { FormGroup, Input, Button, Card, CardHeader, CardBody } from "reactstrap";
 import StarRating from 'react-star-rating-component';
 
 class CommentForm extends React.Component {

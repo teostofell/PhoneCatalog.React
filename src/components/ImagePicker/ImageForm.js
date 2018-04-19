@@ -1,6 +1,5 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import FileInput from "./FileInput";
 
 class ImageForm extends React.Component {

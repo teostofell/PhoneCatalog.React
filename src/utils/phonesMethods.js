@@ -43,17 +43,14 @@ export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
         filterVM["Storage[To]"] = filterVM.Storage["To"];
     }
 
-
-    let { Storage, Price } = filterVM;
-
     var queries = { ...filterVM, ItemsOnPage: itemsOnPage, Page: page };
 
     let result = await Axios.get(origin + "api/phones", {
         params: queries
     })
         .then(response => {
-            let totalItems = parseInt(response.headers["x-items-total-count"]);
-            let totalPages = parseInt(response.headers["x-pages-total-count"]);
+            let totalItems = parseInt(response.headers["x-items-total-count"], 10);
+            let totalPages = parseInt(response.headers["x-pages-total-count"], 10);
             return { items: response.data, totalItems, totalPages }
         }
         );

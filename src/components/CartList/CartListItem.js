@@ -1,9 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-	Card, CardImg, CardText, CardBody,
-	CardTitle, CardFooter, CardSubtitle, Button
-} from 'reactstrap';
 
 class CartListItem extends React.Component {
 	constructor(props) {
@@ -17,14 +12,14 @@ class CartListItem extends React.Component {
 	}
 
 	render() {
-		let { Model, Id, Photo, Slug, Price } = this.props.info;
+		let { Model, Photo, Price } = this.props.info;
 		let { quantity, allowRemove } = this.props;
 
 		return (
 			<React.Fragment>
 				<tr className="cart-item">
 					<th className="quantity" scope="row">{quantity}</th>
-					<td><img className="cart-thumb" src={Photo} /></td>
+					<td><img className="cart-thumb" src={Photo} alt="thumbnail"/></td>
 					<td className="model">{Model}</td>
 					<td className="price">${Price}</td>
 					{allowRemove ?

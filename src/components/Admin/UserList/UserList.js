@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup, ListGroupItem, Badge } from "reactstrap";
+import { ListGroup } from "reactstrap";
 import User from "../User/User";
 import Spinner from "../../Spinner/Spinner";
 
@@ -7,14 +7,14 @@ class UserList extends React.Component {
     render() {
         let { users, roles, onChange } = this.props;
 
-        if(users == null)
-            return <Spinner isSpinning={true}/>;
+        if (users == null)
+            return <Spinner isSpinning={true} />;
 
         return (
             <ListGroup>
                 {
                     users.map((u) => (
-                        <User user={u} roles={roles} onChange={onChange}/>
+                        <User user={u} roles={roles} onChange={onChange} />
                     ))
                 }
             </ListGroup>

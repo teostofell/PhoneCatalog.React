@@ -2,7 +2,6 @@ import React from "react";
 import Phone from "../Phone/Phone";
 import "./PhonesList.css";
 import Spinner from "../Spinner/Spinner";
-import { CardDeck, CardGroup } from 'reactstrap';
 
 function PhonesList(props) {
 	let phones = props.items;

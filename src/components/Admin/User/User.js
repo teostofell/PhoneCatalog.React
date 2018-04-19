@@ -9,10 +9,10 @@ class User extends React.Component {
         let { Name, Role, Id, Avatar } = this.props.user;
         return (
             <ListGroupItem className="mb-3">
-                <div class="media">
+                <div className="media">
                     <img className="d-flex mr-3 rounded-circle user-avatar" src={Avatar} alt="avatar" />
-                    <div class="media-body">
-                        <h5 class="mt-0">{Name}</h5>
+                    <div className="media-body">
+                        <h5 className="mt-0">{Name}</h5>
                         <RoleSelector roles={roles} defaultValue={Role} userId={Id} onChange={onChange} />
                     </div>
                 </div>

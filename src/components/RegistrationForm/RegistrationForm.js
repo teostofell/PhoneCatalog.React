@@ -1,6 +1,5 @@
 import React from "react"
 import { Field, reduxForm } from 'redux-form'
-import Spinner from "../Spinner/Spinner";
 import { Redirect } from "react-router-dom";
 import FileInput from "../ImagePicker/FileInput";
 import "./RegistrationForm.css";
@@ -10,7 +9,7 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
     <label>{label}</label>
     <div>
       <input className={"form-control " + (touched && (error ? "is-invalid" : "is-valid"))} {...input} placeholder={label} type={type} />
-      {touched && error && <div class="invalid-feedback">{error}</div>}
+      {touched && error && <div className="invalid-feedback">{error}</div>}
     </div>
   </div>
 )
@@ -31,7 +30,7 @@ const SelectField = (props) => (
 
 class RegistrationForm extends React.Component {
   render() {
-    const { error, handleSubmit, submitting, data, submitSucceeded, cities } = this.props;
+    const { error, handleSubmit, submitting, submitSucceeded, cities } = this.props;
 
     if (submitSucceeded)
       return <Redirect to="/" />;

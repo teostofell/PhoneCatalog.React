@@ -1,6 +1,6 @@
 import React from "react";
 import Spinner from "../Spinner/Spinner";
-import { CardDeck, CardGroup, Table } from 'reactstrap';
+import { Table } from 'reactstrap';
 import CartListItem from "./CartListItem";
 import "./CartList.css";
 

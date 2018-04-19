@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Modal, ModalHeader, ModalBody, Button, ModalFooter } from "reactstrap";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { toggleLoginModal, signIn } from "../actions/loginActions";
 import LogInForm from "../components/LogInForm/LogInForm";
 import Api from "../utils/Api";
