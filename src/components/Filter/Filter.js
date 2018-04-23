@@ -10,7 +10,7 @@ class Filter extends Component {
 			return <Spinner isSpinning={true}/>
 
 		let {total} = this.props;	
-		let { Brand, OS } = this.props.data;
+		let { Brand, Os } = this.props.data;
 		let { onChecked, onUnchecked, onChanged } = this.props.handlers;
 		return (
 			<div className="filter">
@@ -19,7 +19,7 @@ class Filter extends Component {
 					<span>Showing <strong>{total}</strong> products</span>
 				</div>
 				<CheckboxFilter label="Brand" values={ Brand } field="Brand" onChecked={onChecked} onUnchecked={onUnchecked}/>
-				<CheckboxFilter label="OS" values={ OS } field="OS" onChecked={onChecked} onUnchecked={onUnchecked}/>
+				<CheckboxFilter label="OS" values={ Os } field="Os" onChecked={onChecked} onUnchecked={onUnchecked}/>
 				<RangeFilter group="Price" onChanged={onChanged}/>
 				<RangeFilter group="Storage" onChanged={onChanged}/>
 			</div>

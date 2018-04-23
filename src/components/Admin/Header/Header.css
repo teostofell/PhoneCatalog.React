@@ -1,0 +1,14 @@
+header.admin-header{
+    margin: 0;
+}
+
+header.admin-header .back-button{
+    margin-left: auto;
+    align-self: center;
+}
+
+header.admin-header .back-button div.icon{
+    display: block;
+    color: #212529;
+    margin-right: 2rem;
+}

@@ -10,7 +10,7 @@ class Pagination extends React.Component {
         return (
             <ul className="pagination">
                 {pages.map(p =>
-                    <PageItem number={p} changePage={changePage} />
+                    <PageItem key={p} number={p} changePage={changePage} />
                 )}
             </ul>
         );

@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import { Redirect } from "react-router-dom";
 import FileInput from "../ImagePicker/FileInput";
 import "./RegistrationForm.css";
+import { Alert } from "reactstrap";
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div className="field-block">
@@ -43,7 +44,7 @@ class RegistrationForm extends React.Component {
         <Field name="ConfirmPassword" component={renderField} type="password" label="Confirm Password" />
         <SelectField label="City" name="CityId" items={cities}/>
         <Field name="Avatar" type="file" component={FileInput} />
-        {error && <strong>{error}</strong>}
+        {error && <Alert color="danger">{error}</Alert>}
         <button className="btn btn-primary" type="submit" disabled={submitting}>Submit</button>
       </form>
     )

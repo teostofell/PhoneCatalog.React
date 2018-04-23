@@ -4,6 +4,8 @@ const origin = "http://localhost:2436/";
 
 function convertArrayToObject(items) {
     let result = {};
+    
+    console.log(items, "items");
 
     for (let i of items) {
         result[i] = false;
@@ -31,7 +33,7 @@ export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
 
     if (filterVM != null) {
         filterVM.Brand = convertObjectToArray(filterVM.Brand);
-        filterVM.OS = convertObjectToArray(filterVM.OS);
+        filterVM.Os = convertObjectToArray(filterVM.Os);
     }
 
     if (filterVM.Price) {
@@ -49,9 +51,9 @@ export async function getPhones(filter = null, itemsOnPage = 0, page = 0) {
         params: queries
     })
         .then(response => {
-            let totalItems = parseInt(response.headers["x-items-total-count"], 10);
-            let totalPages = parseInt(response.headers["x-pages-total-count"], 10);
-            return { items: response.data, totalItems, totalPages }
+            let totalItems = response.data.TotalItems;
+            let totalPages = response.data.TotalPages;
+            return { items: response.data.Items, totalItems, totalPages }
         }
         );
     return result;
@@ -63,7 +65,7 @@ export async function getFilters() {
             let items = response.data;
 
             items.Brand = convertArrayToObject(items.Brand);
-            items.OS = convertArrayToObject(items.OS);
+            items.Os = convertArrayToObject(items.Os);
 
             return { items: response.data }
         });

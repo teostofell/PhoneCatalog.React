@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { fetchPhonesList, fetchFiltersList, checkFilter, uncheckFilter, changePhonesPage, rangeChanged } from "../actions/phonesListActions";
 import Filter from "../components/Filter/Filter";
 import PhonesList from "../components/PhonesList/PhonesList";
-import Pagination from "../components/Pagination/Pagination";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
 
@@ -41,8 +40,7 @@ class PhonesListContainer extends React.Component {
 						<Filter total={totalItems} data={this.props.data.filter} handlers={{ onChecked, onUnchecked, onChanged }}/>
 					</div>
 					<div className="col-lg-9">
-						<PhonesList items={items} addToCart={this.onClick} removeFromCart={removeFromCart} OrderId={OrderId} />
-						<Pagination total={total} changePage={changePage}/>
+						<PhonesList items={items} addToCart={this.onClick} removeFromCart={removeFromCart} OrderId={OrderId} total={total} changePage={changePage} />
 					</div>
 				</div>
 			</div>

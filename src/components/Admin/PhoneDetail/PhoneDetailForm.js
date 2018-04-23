@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import Spinner from "../../Spinner/Spinner";
 import { Redirect } from "react-router-dom";
 import FileInput from "../../ImagePicker/FileInput";
-import { FormGroup, Label } from 'reactstrap';
+import { FormGroup, Label, Alert } from 'reactstrap';
 
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
@@ -57,7 +57,7 @@ class PhoneDetailForm extends React.Component {
                 <SelectField items={os} name="OSId" label="OS" />
                 <SelectField items={resolutions} name="ScreenResolutionId" label="Screen Resolution" />
                 <Field name="Photo" type="file" component={FileInput} />
-                {error && <strong>{error}</strong>}
+                {error && <Alert color="danger">{error}</Alert>}
                 <button className="btn btn-primary" type="submit" disabled={submitting}>Submit</button>
             </form>
         )

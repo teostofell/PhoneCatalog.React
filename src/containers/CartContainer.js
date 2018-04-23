@@ -27,7 +27,7 @@ class CartContainer extends React.Component {
         else
             window.alert("Cart is empty");
     }
-
+    
     render() {
         let { cart, removeItem } = this.props;
         return (
