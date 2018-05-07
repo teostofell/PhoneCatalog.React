@@ -4,6 +4,7 @@ import PhoneDetailForm from "../../components/Admin/PhoneDetail/PhoneDetailForm"
 import { fetchFormData } from "../../actions/formActions";
 import Api from "../../utils/Api";
 import { SubmissionError } from "redux-form";
+import { brandsSelector, tokenSelector, resolutionsSelector, osSelector  } from "../../selectors/FormSelectors";
 
 class PhoneUpdateContainer extends React.Component {
     constructor(props) {
@@ -47,10 +48,10 @@ function submit(values, dispatch, token) {
 
 const mapStateToProps = (state) => {
     return {
-        brands: state.formData.brands,
-        os: state.formData.os,
-        resolutions: state.formData.resolutions,
-        token: state.login.token
+        brands: brandsSelector(state),
+        os: osSelector(state),
+        resolutions: resolutionsSelector(state),
+        token: tokenSelector(state)
     }
 }
 

@@ -5,6 +5,8 @@ import NavRow from "../components/Header/NavRow";
 import { toggleLoginModal } from "../actions/loginActions";
 import { fetchSearchList } from "../actions/searchActions";
 import {withRouter} from 'react-router-dom';
+import { searchString } from "../selectors/SearchSelectors";
+import { isLoggedSelector, avatarSelector, isAdminSelector } from "../selectors/ProfileSelectors";
 
 class Header extends React.Component{
     constructor(props){
@@ -40,10 +42,10 @@ class Header extends React.Component{
 
 const mapStateToProps = state => {
 	return {
-        searchString: state.search.searchString,
-        isLogged: state.login.isLogged,
-        isAdmin: state.login.user.IsAdmin,
-        avatar: state.login.user.Avatar
+        searchString: searchString(state),
+        isLogged: isLoggedSelector(state),
+        isAdmin: isAdminSelector(state),
+        avatar: avatarSelector(state),
 	};
 };
 

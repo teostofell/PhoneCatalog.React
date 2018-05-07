@@ -1,0 +1,1 @@
+export const phonesListSelector = (state) => state.phonesList;

@@ -6,6 +6,7 @@ import { Button } from "reactstrap";
 import { closeOrder } from "../actions/cartActions";
 import SvgIcon from 'react-icons-kit';
 import { creditCard } from 'react-icons-kit/icomoon/creditCard';
+import { cartSelector } from "../selectors/cartSelectors";
 
 class CartContainer extends React.Component {
     constructor(props){
@@ -55,7 +56,7 @@ class CartContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart,
+        cart: cartSelector(state),
     };
 }
 

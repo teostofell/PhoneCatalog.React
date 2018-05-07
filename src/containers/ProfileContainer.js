@@ -4,6 +4,7 @@ import UserInfo from "../components/UserInfo/UserInfo";
 import ImagePicker from "../components/ImagePicker/ImagePicker";
 import { changeAvatar, signOut, fetchOrders } from "../actions/loginActions";
 import OrdersList from "../components/OrdersList/OrdersList";
+import { ordersSelector, userSelector } from "../selectors/ProfileSelectors";
 
 class ProfileContainer extends React.Component {
     constructor(props) {
@@ -45,8 +46,8 @@ class ProfileContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        user: state.login.user,
-        orders: state.login.orders,
+        user: userSelector(state),
+        orders: ordersSelector(state),
     };
 }
 

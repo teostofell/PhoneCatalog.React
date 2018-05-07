@@ -5,6 +5,7 @@ import Api from "../utils/Api";
 import { SubmissionError } from "redux-form";
 import { fetchFormData } from "../actions/formActions";
 import Spinner from "../components/Spinner/Spinner";
+import { citiesSelector } from "../selectors/FormSelectors";
 
 class RegistrationContainer extends React.Component {
 	componentDidMount() {
@@ -48,7 +49,7 @@ function submit(values, dispatch) {
 
 const mapStateToProps = state => {
 	return {
-		cities: state.formData.cities,
+		cities: citiesSelector(state),
 	};
 };
 

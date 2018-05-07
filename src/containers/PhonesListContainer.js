@@ -4,7 +4,8 @@ import { fetchPhonesList, fetchFiltersList, checkFilter, uncheckFilter, changePh
 import Filter from "../components/Filter/Filter";
 import PhonesList from "../components/PhonesList/PhonesList";
 import { addToCart, removeFromCart } from "../actions/cartActions";
-
+import { phonesListSelector } from "../selectors/PhonesListSelectors";
+import { cartIdSelector } from "../selectors/CartSelectors";
 
 class PhonesListContainer extends React.Component {
 	constructor(props){
@@ -50,8 +51,8 @@ class PhonesListContainer extends React.Component {
 
 const mapStateToProps = state => {
 	return {
-		data: state.phonesList,
-		OrderId: state.cart.Id,		
+		data: phonesListSelector(state),
+		OrderId: cartIdSelector(state),		
 	};
 };
 

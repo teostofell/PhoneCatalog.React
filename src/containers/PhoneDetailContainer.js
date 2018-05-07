@@ -8,6 +8,9 @@ import { addToCart } from "../actions/cartActions";
 import Api from "../utils/Api";
 import CommentBlock from "../components/Comment/CommentBlock";
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
+import { isLoggedSelector, userIdSelector } from "../selectors/ProfileSelectors";
+import { cartIdSelector } from "../selectors/CartSelectors";
+import { phoneDetailsSelector } from "../selectors/PhoneSelectors";
 
 class PhoneDetailContainer extends React.Component {
     constructor(props) {
@@ -115,10 +118,10 @@ class PhoneDetailContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        details: state.phone.details,
-        orderId: state.cart.Id,
-        userId: state.login.user.Id,
-        isLogged: state.login.isLogged
+        details: phoneDetailsSelector(state),
+        orderId: cartIdSelector(state),
+        userId: userIdSelector(state),
+        isLogged: isLoggedSelector(state),
     };
 }
 

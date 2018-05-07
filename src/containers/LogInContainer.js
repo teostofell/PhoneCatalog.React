@@ -6,6 +6,7 @@ import LogInForm from "../components/LogInForm/LogInForm";
 import Api from "../utils/Api";
 import { SubmissionError } from "redux-form";
 import { getOrder } from "../actions/cartActions";
+import { isModalOpenSelector } from "../selectors/ProfileSelectors";
 
 class LogInContainer extends React.Component{
     render(){
@@ -38,7 +39,7 @@ function submit(values, dispatch){
 
 const mapStateToProps = state => {
 	return {
-		isOpen: state.login.isModalOpen,
+		isOpen: isModalOpenSelector(state),
 	};
 };
 

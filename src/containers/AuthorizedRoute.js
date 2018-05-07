@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
-
+import { isLoggedSelector } from "../selectors/ProfileSelectors";
 
 
 class AuthorizedRoute extends React.Component {
@@ -20,7 +20,7 @@ class AuthorizedRoute extends React.Component {
   
   const mapStateToProps = state => {
     return {
-      isLogged: state.login.isLogged,
+      isLogged: isLoggedSelector(state),
     };
   };
   
